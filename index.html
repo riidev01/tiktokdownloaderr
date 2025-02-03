@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Video TikTok Tanpa Watermark</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        header {
+            background-color: #ff0055;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .loading {
+            display: none;
+            font-size: 18px;
+            color: #ff0055;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Download Video TikTok Tanpa Watermark</h1>
+    </header>
+    <main>
+        <input type="text" id="videoLink" placeholder="Masukkan link video TikTok">
+        <button id="downloadBtn">Download</button>
+        <div class="loading" id="loading">Video sedang diproses...</div>
+        <div id="result"></div>
+    </main>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const link = document.getElementById('videoLink').value;
+            const resultDiv = document.getElementById('result');
+            const loadingDiv = document.getElementById('loading');
+
+            if (link) {
+                loadingDiv.classList.add('fade-in');
+                loadingDiv.style.display = 'block';
+                resultDiv.innerHTML = '';
+
+                // Simulasi proses download
+                setTimeout(() => {
+                    loadingDiv.style.display = 'none';
+                    resultDiv.innerHTML = 'Video berhasil didownload! <a href="#" download>Download Video</a>';
+                    resultDiv.classList.add('fade-in');
+                }, 2000);
+            } else {
+                alert('Silakan masukkan link video TikTok');
+            }
+        });
+    </script>
+</body>
+</html>
