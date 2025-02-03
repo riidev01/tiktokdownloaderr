@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloader Video TikTok</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Downloader Video TikTok</h1>
+        <input type="text" id="videoUrl" placeholder="Masukkan URL Video TikTok">
+        <button id="downloadBtn">Download Video</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const url = document.getElementById('videoUrl').value;
+            if (url) {
+                // Simulasi pengunduhan video
+                document.getElementById('result').innerHTML = 'Mengunduh video dari: ' + url;
+                // Di sini Anda bisa menambahkan logika untuk mengunduh video menggunakan API
+            } else {
+                alert('Silakan masukkan URL video TikTok');
+            }
+        });
+    </script>
+</body>
+</html>
