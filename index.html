@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Video TikTok</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download Video TikTok</h1>
+    <input type="text" id="videoUrl" placeholder="Masukkan URL Video TikTok">
+    <button onclick="downloadVideo()">Download</button>
+
+    <script>
+        function downloadVideo() {
+            const url = document.getElementById('videoUrl').value;
+            if (url) {
+                // Logika untuk mendownload video dari TikTok
+                // Anda perlu menggunakan API atau layanan pihak ketiga untuk mengunduh video
+                alert('Fitur ini belum diimplementasikan. URL: ' + url);
+            } else {
+                alert('Silakan masukkan URL video TikTok.');
+            }
+        }
+    </script>
+</body>
+</html>
