@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Video TikTok Tanpa Watermark</title>
+    <title>Downloader Video TikTok</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            text-align: center;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
         }
 
-        header {
-            background-color: #ff0055;
-            color: white;
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        input {
-            width: 300px;
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 80%;
             padding: 10px;
-            margin: 20px 0;
+            margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 4px;
         }
 
         button {
@@ -33,9 +39,8 @@
             background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
         button:hover {
@@ -44,55 +49,25 @@
 
         #result {
             margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .loading {
-            display: none;
-            font-size: 18px;
-            color: #ff0055;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Download Video TikTok Tanpa Watermark</h1>
-    </header>
-    <main>
-        <input type="text" id="videoLink" placeholder="Masukkan link video TikTok">
-        <button id="downloadBtn">Download</button>
-        <div class="loading" id="loading">Video sedang diproses...</div>
+    <div class="container">
+        <h1>Downloader Video TikTok</h1>
+        <input type="text" id="videoUrl" placeholder="Masukkan URL Video TikTok">
+        <button id="downloadBtn">Download Video</button>
         <div id="result"></div>
-    </main>
+    </div>
     <script>
         document.getElementById('downloadBtn').addEventListener('click', function() {
-            const link = document.getElementById('videoLink').value;
-            const resultDiv = document.getElementById('result');
-            const loadingDiv = document.getElementById('loading');
-
-            if (link) {
-                loadingDiv.classList.add('fade-in');
-                loadingDiv.style.display = 'block';
-                resultDiv.innerHTML = '';
-
-                // Simulasi proses download
-                setTimeout(() => {
-                    loadingDiv.style.display = 'none';
-                    resultDiv.innerHTML = 'Video berhasil didownload! <a href="#" download>Download Video</a>';
-                    resultDiv.classList.add('fade-in');
-                }, 2000);
+            const url = document.getElementById('videoUrl').value;
+            if (url) {
+                // Simulasi pengunduhan video
+                document.getElementById('result').innerHTML = 'Mengunduh video dari: ' + url;
+                // Di sini Anda bisa menambahkan logika untuk mengunduh video menggunakan API
             } else {
-                alert('Silakan masukkan link video TikTok');
+                alert('Silakan masukkan URL video TikTok');
             }
         });
     </script>
